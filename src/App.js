@@ -47,10 +47,10 @@ class App extends Component {
               { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
                   .format(this.state.selected[key].cost) }
             </div>
-        </div>)
-
-    const total = Object.keys(this.state.selected)
-          .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);    
+        </div>)  
+        
+        const total = Object.keys(this.state.selected)
+        .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);  
 
     return (
       <div className="App">

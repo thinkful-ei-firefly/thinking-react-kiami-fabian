@@ -6,6 +6,7 @@ function optionSummary(prop) {
  { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
      .format(prop.total) }
  </div>
-    )}
+    )};
+
     export default optionSummary;
 
