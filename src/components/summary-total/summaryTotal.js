@@ -1,5 +1,5 @@
 import React from 'react';
-import './SumaryTotal.css';
+import './SummaryTotal.css';
 
 function sectionSummary(props) {
     return (

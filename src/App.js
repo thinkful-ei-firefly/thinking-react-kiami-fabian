@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import SectionMain from './components/section-main/SectionMain';
-import SectionOption from './components/option-summary/optionSummary';
+import SummaryMain from './components/summary-main/SummaryMain';
 
 class App extends Component {
   constructor(props){
@@ -43,7 +43,7 @@ class App extends Component {
         <Header />
         <main>
           <SectionMain features={this.props.features} state={this.state} updateFeature={this.updateFeature}/>
-          <SectionOption state={this.state}/>
+          <SummaryMain state={this.state}/>
         </main>
       </div>
     );
