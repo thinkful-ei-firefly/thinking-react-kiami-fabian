@@ -1,5 +1,6 @@
 import React from 'react';
 import Feature from '../feature/Feature';
+import './SectionMain.css';
 
 function SectionMain(props) {
 	const features = Object.keys(props.features)

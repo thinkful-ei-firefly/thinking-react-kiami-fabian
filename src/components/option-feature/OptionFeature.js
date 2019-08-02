@@ -1,4 +1,5 @@
 import React from 'react';
+import './OptionFeature.css';
 
 function OptionFeature(props){
 	const selectedClass = props.item.name === props.selected.name ? 'feature__selected' : '';
