@@ -38,25 +38,12 @@ class App extends Component {
   }
 
   render() {
-    const summary = Object.keys(this.state.selected)
-          .map(key => <div className="summary__option" key={key}>
-            <div className="summary__option__label">{key}  </div>
-            <div className="summary__option__value">{this.state.selected[key].name}</div>
-            <div className="summary__option__cost">
-              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                  .format(this.state.selected[key].cost) }
-            </div>
-        </div>)  
-        
-        const total = Object.keys(this.state.selected)
-        .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);  
-
-    return (
+        return (
       <div className="App">
         <Header />
         <main>
           <SectionMain features={this.props.features} state={this.state} updateFeature={this.updateFeature}/>
-          <SectionOption total={total} state={this.state}/>
+          <SectionOption state={this.state}/>
         </main>
       </div>
     );

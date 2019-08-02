@@ -12,12 +12,14 @@ function optionSummary(props) {
                   .format(props.state.selected[key].cost) }
             </div>
         </div>)
+        const total = Object.keys(props.state.selected)
+        .reduce((acc, curr) => acc + props.state.selected[curr].cost, 0);  
 
     return (
  		<section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
             {summary}
-            <SectionTotal total={props.total}/>
+            <SectionTotal total={total}/>
         </section>
     )}
     
