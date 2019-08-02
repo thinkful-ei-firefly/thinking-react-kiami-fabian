@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import SectionMain from './components/section-main/SectionMain';
+import SectionOption from './components/option-summary/optionSummary';
+import SectionTotal from './components/summary-total/summaryTotal';
 
 class App extends Component {
   constructor(props){
@@ -55,18 +57,9 @@ class App extends Component {
         <Header />
         <main>
           <SectionMain features={this.props.features} state={this.state} updateFeature={this.updateFeature}/>
-          <section className="main__summary">
-            <h3>NEW GREENLEAF 2018</h3>
-            {summary}
-            <div className="summary__total">
-              <div className="summary__total__label">Your Price: </div>
-              <div className="summary__total__value">
-              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                  .format(total) }
-              </div>
-            </div>
-          </section>
         </main>
+        <SectionOption />
+        <SectionTotal />
       </div>
     );
   }

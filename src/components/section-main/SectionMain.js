@@ -12,7 +12,8 @@ function SectionMain(props) {
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             { features }
           </section>
+          
 		);
 }
 
-export default SectionMain
+export default SectionMain;
