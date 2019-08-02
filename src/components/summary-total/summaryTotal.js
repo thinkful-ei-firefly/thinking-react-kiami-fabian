@@ -1,13 +1,16 @@
 import React from 'react';
+import './SumaryTotal.css';
 
-function sectionSummary(prop) {
+function sectionSummary(props) {
     return (
-<section className="main__summary">
-            <h3>NEW GREENLEAF 2018</h3>
-            {prop.summary}
-            <div className="summary__total">
+	<div className="summary__total">
               <div className="summary__total__label">Your Price: </div>
-              </div> </section>
+              <div className="summary__total__value">
+              { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
+                  .format(props.total) }
+              </div>
+            </div>
+
 )};
 
 export default sectionSummary;

@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/header/Header';
 import SectionMain from './components/section-main/SectionMain';
 import SectionOption from './components/option-summary/optionSummary';
-import SectionTotal from './components/summary-total/summaryTotal';
 
 class App extends Component {
   constructor(props){
@@ -57,9 +56,8 @@ class App extends Component {
         <Header />
         <main>
           <SectionMain features={this.props.features} state={this.state} updateFeature={this.updateFeature}/>
+          <SectionOption total={total} state={this.state}/>
         </main>
-        <SectionOption />
-        <SectionTotal />
       </div>
     );
   }

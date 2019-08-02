@@ -1,6 +1,6 @@
 import React from 'react';
 import OptionFeature from '../option-feature/OptionFeature';
-
+import './Feature.css';
 
 function Feature(props) {
 	const options = props.options.map((item, index) => {
